@@ -40,8 +40,9 @@ export const clip = defineInterlude({
     'zh-Hans': '在整个面板上播放你自己的视频：一个文件，或一个文件夹（每次换一个）。使用你的 ffmpeg，没有则首次自动下载。',
     'zh-Hant': '在整個面板上播放你自己的影片：一個檔案，或一個資料夾（每次換一個）。使用你的 ffmpeg，沒有則第一次自動下載。',
   },
-  icon: 'clapperboard',
+  icon: 'circle-play',
   fps: FPS,
+  preview: { poster: 'docs/clip.jpg', video: 'docs/clip.webm' },
   options: t.object({
     source: t.string({
       default: '',
@@ -158,7 +159,7 @@ export const clip = defineInterlude({
 export default definePlugin({
   id: 'video',
   name: { en: 'Video', es: 'Vídeo', de: 'Video', 'zh-Hans': '视频', 'zh-Hant': '影片' },
-  version: '0.1.0',
+  version: '0.1.1',
   description: {
     en: 'Your own videos as an interlude, on the whole panel, decoded by your ffmpeg to the panel’s size.',
     es: 'Tus propios vídeos como interludio, en todo el panel, decodificados por tu ffmpeg al tamaño del panel.',
@@ -173,5 +174,7 @@ export default definePlugin({
   sdk: '^0.2.0',
   languages: ['en', 'es', 'de', 'zh-Hant', 'zh-Hans'],
   permissions: { exec: ['ffmpeg'], files: ['user'], network: ['github.com', 'release-assets.githubusercontent.com'] },
+  icon: 'film',
+  category: 'media',
   interludes: [clip],
 });
