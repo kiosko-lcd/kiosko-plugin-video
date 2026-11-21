@@ -1,7 +1,7 @@
 {
   "name": "kiosko-plugin-video",
   "version": "0.1.0",
-  "description": "Your own videos as a Kiosko interlude, on the whole panel, decoded by your ffmpeg to the panel's size.",
+  "description": "Your own videos as a Kiosko interlude, on the whole panel: decoded by ffmpeg (yours, or one it downloads once) to the panel's size.",
   "type": "module",
   "license": "MIT",
   "author": "Loksly",
