@@ -4,7 +4,7 @@
   "description": "Your own videos as a Kiosko interlude, on the whole panel: decoded by ffmpeg (yours, or one it downloads once) to the panel's size.",
   "type": "module",
   "license": "MIT",
-  "author": "Loksly",
+  "author": "Loksly <info@kioskolcd.dev> (https://kioskolcd.dev)",
   "keywords": [
     "kiosko",
     "kiosko-plugin",
