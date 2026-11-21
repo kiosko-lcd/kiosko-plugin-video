@@ -1,0 +1,93 @@
+{
+  "manifest": 1,
+  "id": "video",
+  "package": "kiosko-plugin-video",
+  "name": {
+    "en": "Video",
+    "es": "Vídeo",
+    "de": "Video",
+    "zh-Hans": "视频",
+    "zh-Hant": "影片"
+  },
+  "version": "0.1.0",
+  "description": {
+    "en": "Your own videos as an interlude, on the whole panel, decoded by your ffmpeg to the panel’s size.",
+    "es": "Tus propios vídeos como interludio, en todo el panel, decodificados por tu ffmpeg al tamaño del panel.",
+    "de": "Deine eigenen Videos als Zwischenspiel, auf dem ganzen Panel, von deinem ffmpeg auf Panelgröße dekodiert.",
+    "zh-Hans": "把你自己的视频作为插曲在整个面板上播放，由你的 ffmpeg 解码成面板的尺寸。",
+    "zh-Hant": "把你自己的影片當作插曲在整個面板上播放，由你的 ffmpeg 解碼成面板的尺寸。"
+  },
+  "author": "Loksly",
+  "license": "MIT",
+  "homepage": "https://github.com/kiosko-lcd/kiosko-plugin-video#readme",
+  "repository": "https://github.com/kiosko-lcd/kiosko-plugin-video",
+  "sdk": "^0.2.0",
+  "platforms": [
+    "linux",
+    "darwin",
+    "win32"
+  ],
+  "languages": [
+    "en",
+    "es",
+    "de",
+    "zh-Hant",
+    "zh-Hans"
+  ],
+  "categories": [],
+  "tags": [],
+  "permissions": {
+    "exec": [
+      "ffmpeg"
+    ],
+    "files": [
+      "user"
+    ],
+    "network": [
+      "github.com",
+      "release-assets.githubusercontent.com"
+    ]
+  },
+  "riskyOptions": [
+    {
+      "path": "video/clip: source",
+      "risk": [
+        "path"
+      ],
+      "secret": false
+    },
+    {
+      "path": "video/clip: bin",
+      "risk": [
+        "exec"
+      ],
+      "secret": false
+    }
+  ],
+  "requires": [],
+  "optional": [],
+  "widgets": [],
+  "sources": [],
+  "interludes": [
+    {
+      "type": "video/clip",
+      "name": {
+        "en": "Your videos",
+        "es": "Tus vídeos",
+        "de": "Deine Videos",
+        "zh-Hans": "你的视频",
+        "zh-Hant": "你的影片"
+      },
+      "description": {
+        "en": "A video of yours on the whole panel: one file, or a folder of them (a different one each time). Uses your ffmpeg, or downloads one the first time.",
+        "es": "Un vídeo tuyo en todo el panel: un archivo, o una carpeta de ellos (cada vez uno distinto). Usa tu ffmpeg, o descarga uno la primera vez.",
+        "de": "Ein eigenes Video auf dem ganzen Panel: eine Datei oder ein Ordner voller Videos (jedes Mal ein anderes). Nutzt dein ffmpeg oder lädt beim ersten Mal eines herunter.",
+        "zh-Hans": "在整个面板上播放你自己的视频：一个文件，或一个文件夹（每次换一个）。使用你的 ffmpeg，没有则首次自动下载。",
+        "zh-Hant": "在整個面板上播放你自己的影片：一個檔案，或一個資料夾（每次換一個）。使用你的 ffmpeg，沒有則第一次自動下載。"
+      },
+      "icon": "clapperboard",
+      "fps": 24
+    }
+  ],
+  "templates": []
+}

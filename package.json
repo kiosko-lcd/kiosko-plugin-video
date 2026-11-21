@@ -1,0 +1,70 @@
+{
+  "name": "kiosko-plugin-video",
+  "version": "0.1.0",
+  "description": "Your own videos as a Kiosko interlude, on the whole panel, decoded by your ffmpeg to the panel's size.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Loksly",
+  "keywords": [
+    "kiosko",
+    "kiosko-plugin",
+    "lcd",
+    "video",
+    "ffmpeg",
+    "interlude"
+  ],
+  "homepage": "https://github.com/kiosko-lcd/kiosko-plugin-video#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiosko-lcd/kiosko-plugin-video.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kiosko-lcd/kiosko-plugin-video/issues"
+  },
+  "exports": {
+    ".": {
+      "source": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "kiosko": {
+    "plugin": "./dist/index.js",
+    "id": "video",
+    "sdk": "^0.2.0",
+    "languages": [
+      "en",
+      "es",
+      "de",
+      "zh-Hant",
+      "zh-Hans"
+    ],
+    "manifest": "./kiosko-manifest.json"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "kiosko-manifest.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "test": "node --conditions=source --test \"src/**/*.test.ts\"",
+    "check": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@kiosko/sdk": "^0.2.0"
+  },
+  "devDependencies": {
+    "@kiosko/core": "^0.2.1",
+    "@kiosko/sdk": "^0.2.1",
+    "@napi-rs/canvas": "^1.0.10",
+    "@types/node": "^24.0.0",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.9.3"
+  }
+}
