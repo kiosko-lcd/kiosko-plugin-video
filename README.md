@@ -8,6 +8,8 @@ copied or converted to disk.
 A plugin for [Kiosko](https://github.com/kiosko-lcd/kiosko), the widget mosaic
 for small USB LCD panels. **Optional:** Kiosko doesn't install it.
 
+![A sunset clip played on a 1920×462 panel, cropped to fill it](docs/clip.jpg)
+
 ## Install
 
 ```sh
@@ -48,6 +50,10 @@ skipping frames rather than slowing the video down.
 ## Interludes
 
 ### Your videos — `video/clip`
+
+The clip in the pictures (`docs/clip.jpg`, `docs/clip.webm`) is not anyone's
+footage: a sunset drawn by a small script made for it (no third-party
+material), played through this interlude to a 1920×462 panel with `fit: cover`.
 
 | Option | Type | Default | |
 |---|---|---|---|
